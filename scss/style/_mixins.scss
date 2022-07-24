@@ -4,7 +4,8 @@
     width: $width;
 }
 
-@mixin font($fs, $lh) {
+@mixin font($fw, $fs, $lh) {
+    font-weight: $fw;
     font-size: $fs;
     line-height: $lh;
 }

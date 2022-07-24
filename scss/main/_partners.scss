@@ -1,0 +1,114 @@
+.container-partners {
+    padding-top: 30px;
+}
+
+.title-partners {
+    @include font(700, 14px, 17px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.partners {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__container {
+        width: 375px;
+
+        &:nth-child(n+7) {
+            display: none;
+        }
+    }
+    
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+
+        &-hillel {
+            background-color: #1C4280;
+        }
+
+        &-wannabiz {
+            background-color: #143646;
+        }
+
+        &-tapgerine {
+            background-color: #F48B30;
+        }
+
+        &-3dlook {
+            background-color: #9E4DC3;
+        }
+
+        &-orangear {
+            background-color: #FD9339;
+        }
+
+        &-adtelligent {
+            background-color: #E2E2E4;
+        }
+
+        &-clickky {
+            background-color: #C71C36;
+        }
+
+        &-ecoleasing {
+            background-color: #DCF3F9;
+        }
+
+        &-infatek {
+            background-color: #EAEAEA;
+        }
+
+        &-citypark {
+            background-color: #282240;
+        }
+
+        &-artprint {
+            background-color: #1D4568;
+        }
+
+        &-ultimatecard {
+            background-color: #000000;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .partners {
+
+        &__container {
+            width: 256px;
+
+        &:nth-child(n+7) {
+            display: block;
+        }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .partners {
+
+        &__container {
+            width: 256px;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .partners {
+        padding: 0 100px;
+
+        &__container {
+            width: 430px;
+        }
+    }
+}

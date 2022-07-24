@@ -1,0 +1,218 @@
+.container-services {
+    background: $bgBlockPrimary;
+    padding-bottom: 60px;
+    position: relative;
+    border-radius: 0px 0px 12px 12px;
+
+    &::before {
+        content: '';
+        width: 335px;
+        height: 10px;
+        position: absolute;
+        background: #CACADB;
+        border-radius: 0px 0px 12px 12px;
+        bottom: -10px;
+        left: 20px;
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        width: 295px;
+        height: 10px;
+        position: absolute;
+        background: #E7E7F2;
+        border-radius: 0px 0px 12px 12px;
+        bottom: -20px;
+        left: 40px;
+        z-index: -2;
+    }
+}
+
+.wrapper {
+    @include wrapper(auto, auto, 315px);
+}
+
+.services {
+    &__item {
+        width: 315px;
+        margin-bottom: 30px;
+
+        &:nth-child(3) {
+            margin-top: 30px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        @include font(700, 14px, 17px);
+        color: $colorTextSecondary;
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        &:first-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__link::after {
+        content: url(../images/services/services_icon_arrow-right.png);
+        margin-left: 5.5px;
+    }
+
+    &__title {
+        background: $bgTextPrimary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        @include font(700, 30px, 37px);
+    }
+
+    &__sub-title {
+        @include font(700, 22px, 27px);
+        color: $colorTextSecondary;
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        background: $bgPrimary;
+        border-radius: $brPrimary;
+        padding: 14px;
+    }
+
+    &__desc {
+        @include font(400, 16px, 26px);
+        color: $colorTextPrimary;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 648px;
+    }
+
+    .container-services {
+        &::before {
+            content: '';
+            width: 728px;
+            height: 10px;
+            position: absolute;
+            background: #CACADB;
+            border-radius: 0px 0px 12px 12px;
+            bottom: -10px;
+            left: 20px;
+            z-index: -1;
+        }
+    
+        &::after {
+            content: '';
+            width: 688px;
+            height: 10px;
+            position: absolute;
+            background: #E7E7F2;
+            border-radius: 0px 0px 12px 12px;
+            bottom: -20px;
+            left: 40px;
+            z-index: -2;
+        }
+    }
+
+    .services {
+        &__item-container {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        &__item {
+            width: calc(50% - 30px);
+            margin-bottom: 0;
+        }
+
+        &__title {
+            @include font(700, 38px, 46px);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        width: 904px;
+    }
+
+    .container-services {
+        &::before {
+            content: '';
+            width: 984px;
+            height: 10px;
+            position: absolute;
+            background: #CACADB;
+            border-radius: 0px 0px 12px 12px;
+            bottom: -10px;
+            left: 20px;
+            z-index: -1;
+        }
+    
+        &::after {
+            content: '';
+            width: 944px;
+            height: 10px;
+            position: absolute;
+            background: #E7E7F2;
+            border-radius: 0px 0px 12px 12px;
+            bottom: -20px;
+            left: 40px;
+            z-index: -2;
+        }
+    }
+
+    .services {
+        &__item {
+            width: calc(33.33% - 40px);
+
+            &:nth-child(3) {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .wrapper {
+        width: 100%;
+    }
+    .container-services {
+        padding: 0px 160px 60px 160px;
+
+        &::before {
+            content: '';
+            width: 1880px;
+            height: 10px;
+            position: absolute;
+            background: #CACADB;
+            border-radius: 0px 0px 12px 12px;
+            bottom: -10px;
+            left: 20px;
+            z-index: -1;
+        }
+    
+        &::after {
+            content: '';
+            width: 1840px;
+            height: 10px;
+            position: absolute;
+            background: #E7E7F2;
+            border-radius: 0px 0px 12px 12px;
+            bottom: -20px;
+            left: 40px;
+            z-index: -2;
+        }
+    }
+}

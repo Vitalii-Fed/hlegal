@@ -1,5 +1,7 @@
-@use './style/variables';
-@use './style/mixins';
+@use './style/variables' as *;
+@use './style/mixins' as *;
 @import './style/normalize';
+@import '../scss/style/fonts';
 @import './style/general';
 @import './main/services';
+@import './main/partners';
