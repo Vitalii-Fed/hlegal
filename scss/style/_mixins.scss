@@ -1,0 +1,10 @@
+@mixin wrapper($left, $right, $width) {
+    margin-left: $left;
+    margin-right: $right;
+    width: $width;
+}
+
+@mixin font($fs, $lh) {
+    font-size: $fs;
+    line-height: $lh;
+}
