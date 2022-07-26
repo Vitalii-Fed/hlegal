@@ -6,36 +6,31 @@
 
     &::before {
         content: '';
-        width: 335px;
         height: 10px;
         position: absolute;
         background: #CACADB;
         border-radius: 0px 0px 12px 12px;
         bottom: -10px;
         left: 20px;
+        right: 20px;
         z-index: -1;
     }
 
     &::after {
         content: '';
-        width: 295px;
         height: 10px;
         position: absolute;
         background: #E7E7F2;
         border-radius: 0px 0px 12px 12px;
         bottom: -20px;
         left: 40px;
+        right: 40px;
         z-index: -2;
     }
 }
 
-.wrapper {
-    @include wrapper(auto, auto, 315px);
-}
-
 .services {
     &__item {
-        width: 315px;
         margin-bottom: 30px;
 
         &:first-child {
@@ -48,19 +43,29 @@
     }
 
     &__link {
-        @include font(700, 14px, 17px);
+        @include font(14px, 17px);
+        font-weight: 700;
         color: $colorTextSecondary;
         text-decoration: none;
         letter-spacing: 1px;
         text-transform: uppercase;
+        padding: 0 10px 0 0;
+        position: relative;
 
         &:first-child {
             margin-bottom: 10px;
         }
 
         &::after {
-            content: url(../images/services/services_icon_arrow-right.png);
-            margin-left: 5.5px;
+            content: '';
+            position: absolute;
+            width: 5.5px;
+            height: 5.5px;
+            border: 2px solid $colorTextSecondary;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(45deg);
+            bottom: 30%;
         }
     }
 
@@ -69,11 +74,13 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        @include font(700, 30px, 37px);
+        @include font(30px, 37px);
+        font-weight: 700
     }
 
     &__sub-title {
-        @include font(700, 22px, 27px);
+        @include font(22px, 27px);
+        font-weight: 700;
         color: $colorTextSecondary;
         display: block;
         margin-top: 30px;
@@ -83,30 +90,44 @@
     &__img {
         background: $bgPrimary;
         border-radius: $brPrimary;
+        width: 92px;
+        height: 92px;
         padding: 14px;
+
+        &-ecommerce {
+            @include bgi('../images/services/ecommerce_icon.png');
+        }
+
+        &-support {
+            @include bgi('../images/services/support_icon.png');
+        }
+
+        &-corporate {
+            @include bgi('../images/services/corporate_icon.png');
+        }
+
+        &-building {
+            @include bgi('../images/services/building_icon.png');
+        }
+
+        &-protection {
+            @include bgi('../images/services/protection_icon.png');
+        }
+
+        &-court {
+            @include bgi('../images/services/court_icon.png');
+        }
     }
 
     &__desc {
-        @include font(400, 16px, 26px);
+        @include font(16px, 26px);
         color: $colorTextPrimary;
     }
 }
 
 @media (min-width: 768px) {
     .wrapper {
-        width: 648px;
-    }
-
-    .container-services {
-        &::before {
-            content: '';
-            width: 728px;
-        }
-    
-        &::after {
-            content: '';
-            width: 688px;
-        }
+        padding: 0 60px 0 60px;
     }
 
     .services {
@@ -127,28 +148,12 @@
         }
 
         &__title {
-            @include font(700, 38px, 46px);
+            @include font(38px, 46px);
         }
     }
 }
 
 @media (min-width: 1024px) {
-    .wrapper {
-        width: 904px;
-    }
-
-    .container-services {
-        &::before {
-            content: '';
-            width: 984px;
-        }
-    
-        &::after {
-            content: '';
-            width: 944px;
-        }
-    }
-
     .services {
         &__item {
             width: calc(33.33% - 40px);
@@ -158,28 +163,20 @@
 
 @media (min-width: 1920px) {
     .wrapper {
-        width: 100%;
+        padding: 0 160px 0 160px;
     }
     .container-services {
-        padding: 0px 160px 60px 160px;
-
-        &::before {
-            content: '';
-            width: 1880px;
-        }
-    
-        &::after {
-            content: '';
-            width: 1840px;
-        }
+        padding: 0 0 60px 0;
     }
 
-    .services__link:hover {
-        color: #F0145A;
+    .services__link {
+        &:hover {
+            color: #F0145A;
 
-        &::after {
-            content: url(../images/services/services_icon_arrow-right2.png);
-            margin-left: 5.5px;
+        }
+        
+        &:hover::after {
+            border-color: #F0145A;
         }
     }
 }

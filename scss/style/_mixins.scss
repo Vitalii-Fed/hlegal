@@ -1,11 +1,10 @@
-@mixin wrapper($left, $right, $width) {
-    margin-left: $left;
-    margin-right: $right;
-    width: $width;
-}
-
-@mixin font($fw, $fs, $lh) {
-    font-weight: $fw;
+@mixin font($fs, $lh) {
     font-size: $fs;
     line-height: $lh;
+}
+
+@mixin bgi($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
 }
