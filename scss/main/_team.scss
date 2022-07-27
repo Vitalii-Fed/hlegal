@@ -1,0 +1,115 @@
+.container-team {
+    padding: 50px 0 60px 0;
+}
+
+.team {
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    &__content {
+        padding: 30px 30px 30px 30px;
+        background: #F5F5FA;
+        border-radius: 0 0 12px 12px;
+    }
+
+    &__link {
+        @include font(14px, 17px);
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #24A3FF;
+        text-decoration: none;
+        padding: 0 10px 0 0;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 5.5px;
+            height: 5.5px;
+            border: 2px solid $colorTextSecondary;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(45deg);
+            bottom: 30%;
+        }
+    }
+
+    &__title {
+        @include font(30px, 37px);
+        font-weight: 700;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 30px;
+    }
+
+    &__name {
+        @include font(16px, 20px);
+        font-weight: 700;
+        color: #B3B3BA;
+    }
+
+    &__post {
+        @include font(14px, 22px);
+        color: #B3B3BA;
+        margin-top: 6px;
+
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    &__btn {
+        width: 16px;
+        height: 16px;
+        background: #24A3FF;
+        opacity: 0.2;
+        border-radius: 50%;
+        border: none;
+
+        &:checked {
+            background: #24A3FF;
+                opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+    padding: 0 60px 0 60px;
+    }
+
+    .container-team {
+        padding: 80px 0 60px 0;
+    }
+
+    .team {
+        &__title {
+            @include font(38px, 46px);
+        }
+}
+}
+
+@media (min-width: 1024px) {
+    .team {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+        &__content {
+            border-radius: 0 12px 12px 0;
+            }
+    }
+}
+
+@media (min-width: 1920px) {
+    .wrapper {
+        padding: 0 160px 0 160px;
+    }
+}
