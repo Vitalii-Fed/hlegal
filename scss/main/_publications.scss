@@ -44,7 +44,9 @@
     }
 
     &__img {
-        display: block;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px 8px 0px 0px;
     }
 
     &__sub-title {

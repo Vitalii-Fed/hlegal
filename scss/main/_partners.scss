@@ -13,20 +13,17 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
-    &__container {
-        width: 375px;
-
-        &:nth-child(n+7) {
-            display: none;
-        }
-    }
     
     &__link {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 120px;
+        width: 100%;
+
+        &:nth-child(n+7) {
+            display: none;
+        }
 
         &-hillel {
             background-color: #1C4280;
@@ -81,15 +78,25 @@
 @media (min-width: 768px) {
     .partners {
 
-        &__container {
+        &__link {
             width: 256px;
-
-        &:nth-child(n+7) {
-            display: block;
+    
+            &:nth-child(n+7) {
+                display: flex;
+            }
+            }
         }
+}
+
+@media (min-width: 1440px) {
+    .partners {
+
+        &__link {
+            width: 360px;
         }
     }
 }
+
 
 @media (min-width: 1920px) {
     .container-partners {
