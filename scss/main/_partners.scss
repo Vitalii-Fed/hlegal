@@ -79,22 +79,13 @@
     .partners {
 
         &__link {
-            width: 256px;
+            width: 33.33%;
     
             &:nth-child(n+7) {
                 display: flex;
             }
             }
         }
-}
-
-@media (min-width: 1440px) {
-    .partners {
-
-        &__link {
-            width: 360px;
-        }
-    }
 }
 
 
@@ -104,10 +95,12 @@
     }
 
     .partners {
-        padding: 0 100px;
+        width: 1720px;
+        margin-right: auto;
+        margin-left: auto;
 
-        &__container {
-            width: 430px;
+        &__link {
+            width: 25%;
         }
     }
 }
