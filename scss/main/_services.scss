@@ -87,27 +87,32 @@
         padding: 14px;
 
         &-ecommerce {
-            @include bgi('../images/services/ecommerce_icon.png');
+            background-image: url('../images/services/ecommerce_icon.png');
         }
 
         &-support {
-            @include bgi('../images/services/support_icon.png');
+            background-image: url('../images/services/support_icon.png');
         }
 
         &-corporate {
-            @include bgi('../images/services/corporate_icon.png');
+            background-image: url('../images/services/corporate_icon.png');
         }
 
         &-building {
-            @include bgi('../images/services/building_icon.png');
+            background-image: url('../images/services/building_icon.png');
         }
 
         &-protection {
-            @include bgi('../images/services/protection_icon.png');
+            background-image: url('../images/services/protection_icon.png');
         }
 
         &-court {
-            @include bgi('../images/services/court_icon.png');
+            background-image: url('../images/services/court_icon.png');
+        }
+
+        &-bg {
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 

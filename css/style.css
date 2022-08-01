@@ -429,31 +429,23 @@ body {
 }
 .services__img-ecommerce {
   background-image: url("../images/services/ecommerce_icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .services__img-support {
   background-image: url("../images/services/support_icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .services__img-corporate {
   background-image: url("../images/services/corporate_icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .services__img-building {
   background-image: url("../images/services/building_icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .services__img-protection {
   background-image: url("../images/services/protection_icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .services__img-court {
   background-image: url("../images/services/court_icon.png");
+}
+.services__img-bg {
   background-repeat: no-repeat;
   background-position: center;
 }
