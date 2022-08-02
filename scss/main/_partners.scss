@@ -88,6 +88,15 @@
         }
 }
 
+@media (min-width: 1024px) {
+    .partners {
+
+        &__link {
+            width: 25%;
+        }
+    }
+}
+
 
 @media (min-width: 1920px) {
     .container-partners {

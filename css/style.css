@@ -426,6 +426,8 @@ body {
   width: 92px;
   height: 92px;
   padding: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .services__img-ecommerce {
   background-image: url("../images/services/ecommerce_icon.png");
@@ -444,10 +446,6 @@ body {
 }
 .services__img-court {
   background-image: url("../images/services/court_icon.png");
-}
-.services__img-bg {
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .services__desc {
   font-size: 16px;
@@ -563,6 +561,11 @@ body {
   }
   .partners__link:nth-child(n+7) {
     display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .partners__link {
+    width: 25%;
   }
 }
 @media (min-width: 1920px) {
@@ -775,6 +778,9 @@ body {
   background: #E6E6F0;
   display: block;
   margin-bottom: 15px;
+}
+.publications__item-link {
+  text-decoration: none;
 }
 .publications__content {
   background: #FFFFFF;

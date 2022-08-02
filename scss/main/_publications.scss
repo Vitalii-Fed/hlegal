@@ -77,6 +77,13 @@
         }
     }
 
+    &__item {
+    }
+
+    &__item-link {
+        text-decoration: none;
+    }
+
     &__content {
         background: #FFFFFF;
         border-radius: 0 0 8px 8px;

@@ -85,6 +85,8 @@
         width: 92px;
         height: 92px;
         padding: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
 
         &-ecommerce {
             background-image: url('../images/services/ecommerce_icon.png');
@@ -108,11 +110,6 @@
 
         &-court {
             background-image: url('../images/services/court_icon.png');
-        }
-
-        &-bg {
-            background-repeat: no-repeat;
-            background-position: center;
         }
     }
 
