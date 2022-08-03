@@ -43,6 +43,11 @@
         font-size: 0;
     }
 
+    &__item {
+        background: #FFFFFF;
+        border-radius: 0 0 8px 8px;
+    }
+
     &__img {
         width: 100%;
         object-fit: cover;
@@ -77,17 +82,12 @@
         }
     }
 
-    &__item {
-    }
-
     &__item-link {
         text-decoration: none;
     }
 
     &__content {
-        background: #FFFFFF;
-        border-radius: 0 0 8px 8px;
-        padding: 30px 30px 30px 30px;
+        padding: 30px;
     }
 }
 
@@ -127,7 +127,5 @@
 @media (min-width: 1920px) {
     .wrapper {
         padding: 0 160px 0 160px;
-
-
     }
 }

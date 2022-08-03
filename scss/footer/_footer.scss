@@ -5,9 +5,9 @@
 
 .footer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+
     &::before {
         content: '';
         background: #E6E6F0;
@@ -19,9 +19,16 @@
 
     &__container {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         flex-direction: column;
+    }
+
+    &__address-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
-        width: 100%;
     }
 
     &__address {
@@ -36,7 +43,14 @@
         text-transform: uppercase;
         color: #24A3FF;
         text-decoration: none;
-        margin: 10px 0 20px 0;
+        margin: 10px 0 0 0;
+    }
+
+    &__icon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 21px;
     }
 
     &__icon {
@@ -78,28 +92,44 @@
         @include font(16px, 20px);
         text-align: center;
         color: #B3B3BA;
+        display: block;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 460px) {
     .footer {
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        &__container {
-            justify-content: space-between;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
+        flex-direction: column;
 
         &__address-container {
-            margin-right: 90px;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: -110px;
+        }
+
+        &__address {
+            position: relative;
+            padding-right: 26px;
+
+            &::after {
+                content: '';
+                background: #E6E6F0;
+                height: 6px;
+                width: 6px;
+                border-radius: 50%;
+                position: absolute;
+                top: 7px;
+                right: 10px;
+        }
+        }
+
+        &__map {
+            margin: 0;
         }
 
         &__icon-container {
-            order: 1;
-            display: flex;
+            flex-direction: row;
             justify-content: center;
+            margin-bottom: 30px;
         }
 
         &__contacts {
@@ -108,71 +138,56 @@
         }
 
         &__phone {
+            margin: 0;
+            padding: 0 26px 0 26px;
+            position: relative;
 
             &::before {
                 content: '';
                 background: #E6E6F0;
                 height: 6px;
                 width: 6px;
-                display: inline-block;
                 margin: 0 10px 0 10px;
                 border-radius: 50%;
+                position: absolute;
+                top: 7px;
+                left: 0;
+            }
+
+            &::after {
+                content: '';
+                background: #E6E6F0;
+                height: 6px;
+                width: 6px;
+                margin: 0 10px 0 10px;
+                border-radius: 50%;
+                position: absolute;
+                top: 7px;
             }
         }
-        
+
         &__mail {
             margin: 0;
-
-            &::before {
-                content: '';
-                background: #E6E6F0;
-                height: 6px;
-                width: 6px;
-                display: inline-block;
-                margin: 0 10px 0 10px;
-                border-radius: 50%;
-            }
         }
-
-        &__map {
-                &::before {
-                content: '';
-                background: #E6E6F0;
-                height: 6px;
-                width: 6px;
-                display: inline-block;
-                margin: 0 10px 0 10px;
-                border-radius: 50%;
-            }
+        
+        &__license {
+            align-items: center;
         }
-
-
-        // &__container {
-        //     align-items: flex-start;
-        // }
-
-        // &__license {
-        //     position: absolute;
-        //     top: 35px;
-        //     right: 0;
-        // }
-
-        // &__contacts {
-        //     flex-direction: row;
-        // }
-
-        // &__mail {
-        //     margin: 0;
-
-        //     &::before {
-        //         content: '';
-        //         background: #E6E6F0;
-        //         height: 6px;
-        //         width: 6px;
-        //         display: inline-block;
-        //         margin: 0 10px 0 10px;
-        //         border-radius: 50%;
-        //     }
-        // }
     }
+}
+
+@media (min-width: 795px) {
+    .footer {
+        justify-content: space-between;
+        flex-direction: row;
+
+        &__address-container {
+            justify-content: flex-start;
+            margin: 0;
+        }
+
+        &__icon-container {
+            margin-bottom: 0;
+        }
+}
 }
