@@ -1,0 +1,46 @@
+.container-benefits {
+    padding-bottom: 30px;
+}
+
+.benefits {
+
+    &__item-container {
+        display: flex;
+        gap: 30px;
+    }
+    
+    &__item {
+        @include font(30px, 37px);
+        font-weight: 700;
+        text-align: right;
+        color: #B3B3BA;
+
+        &:first-child {
+            background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+
+    &__title {
+        @include font(20px, 24px);
+        font-weight: 700;
+        color: #FFFFFF;
+        margin: 0 0 30px 0;
+    }
+
+    &__desc-container {
+        &::before {
+            content: '';
+            height: 2px;
+            width: 100%;
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+    &__desc {
+        @include font(19px, 30px);
+        color: #FFFFFF;
+    }
+}
