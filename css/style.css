@@ -1128,3 +1128,109 @@ body {
     top: 20%;
   }
 }
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../images/header/symbol.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header__title {
+  font-size: 38px;
+  line-height: 46px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0 30px 0 30px;
+}
+.header__button {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background: none;
+  width: 42px;
+  height: 42px;
+  padding: 8px 5px 12px 12px;
+}
+.header__button-item {
+  border-top: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  width: 14px;
+  height: 14px;
+  transform: rotate(135deg);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    background-size: contain;
+  }
+}
+.form-container {
+  padding: 30px;
+  background: #F5F5FA;
+  height: 640px;
+  max-width: 650px;
+  width: 100%;
+}
+
+.form__title {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 700;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 30px;
+  display: inline-block;
+}
+.form__sub-title {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+  margin-bottom: 15px;
+}
+.form__name {
+  border: none;
+  width: 100%;
+  padding: 15px 0 15px 15px;
+}
+.form__message {
+  margin: 15px 0 30px 0;
+  border: none;
+  width: 100%;
+  padding: 15px 0 15px 15px;
+}
+.form__phone {
+  border: none;
+  width: 100%;
+  padding: 15px 0 15px 15px;
+}
+.form__email {
+  margin: 15px 0 30px 0;
+  border: none;
+  width: 100%;
+  padding: 15px 0 15px 15px;
+}
+.form__btn {
+  border: none;
+  background: #24A3FF;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 18px 0 18px 0;
+  width: 100%;
+}
+.form__btn-cross {
+  display: inline-block;
+}

@@ -1,0 +1,75 @@
+.form-container {
+    padding: 30px;
+    background: #F5F5FA;
+    height: 640px;
+    max-width: 650px;
+    width: 100%;
+}
+
+.form {
+    &__title {
+        @include font(30px, 37px);
+        font-weight: 700;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding-bottom: 30px;
+        display: inline-block;
+    }
+
+    &__sub-title {
+        @include font(14px, 17px);
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #B3B3BA;
+        margin-bottom: 15px;
+    }
+
+    &__name {
+        border: none;
+        width: 100%;
+        padding: 15px 0 15px 15px;
+    }
+
+    &__message {
+        margin: 15px 0 30px 0;
+        border: none;
+        width: 100%;
+        padding: 15px 0 15px 15px;
+
+    }
+
+    &__phone {
+        border: none;
+        width: 100%;
+        padding: 15px 0 15px 15px;
+
+    }
+
+    &__email {
+        margin: 15px 0 30px 0;
+        border: none;
+        width: 100%;
+        padding: 15px 0 15px 15px;
+
+    }
+
+    &__btn {
+        border: none;
+        background: #24A3FF;
+        box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+        border-radius: 12px;
+        font-weight: 700;
+        @include font(16px, 20px);
+        text-align: center;
+        color: #FFFFFF;
+        padding: 18px 0 18px 0;
+        width: 100%;
+    }
+
+    &__btn-cross {
+        display: inline-block;
+    }
+}
