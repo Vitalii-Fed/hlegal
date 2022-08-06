@@ -17,23 +17,24 @@
         padding: 0 30px 0 30px;
     }
 
-    &__button {
-        border: none;
+    &__btn {
+        opacity: 0.5;
+        border: 2px solid #FFFFFF;
+        border-radius: 50%;
         background: none;
         width: 42px;
         height: 42px;
-        padding: 8px 5px 12px 12px;
-        background-image: url(../images/header/hero_button.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+        padding: 7px 0 0 0;
 
-    &__button:hover {
-        color: #F0145A;
+        &:hover {
+            border-color: #F0145A;
+        }
+
+        &-arrow:hover {
+            stroke: #F0145A;
+        }
     }
 }
-
-
 
 @media (min-width: 1024px) {
     .header {

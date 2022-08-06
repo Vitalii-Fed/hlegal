@@ -19,16 +19,19 @@
                         <h1 class="header__title">
                             you legal solutions provider
                         </h1>
-                        <button class="header__button">
+                        <button type="button" id="open_button" class="header__btn">
+                            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="header__btn-arrow" d="M1 1L10 10L19 1" stroke="white" stroke-width="2"/>
+                            </svg>
                         </button>
-                        <div class="layer">
-                            <div class="form-container form-showed" id="layer">
+                        <div id="layer" class="layer form_showed">
+                            <div class="form-container">
                                 <form action="https://fom.in.ua/echo" method="get" class="form">
                                     <div class="form__title-container">
                                         <h2 class="form__title">
                                             We would like to help you
                                         </h2>
-                                        <button type="submit" class="form__btn-cross">
+                                        <button id="close" type="button" class="form__btn-cross">
                                         </button>
                                     </div>
                                     <input type="text" name="name" placeholder="Name" class="form__name">
@@ -48,30 +51,36 @@
                 </div>
             </section>
             <section class="container-benefits">
-                <div class="wrapper">
+                <div class="wrapper-benefits">
                     <div class="benefits">
-                        <div class="benefits__link-container">
-                            <a href="#" class="benefits__link">
-                                Consistent
-                            </a>
-                            <a href="#" class="benefits__link">
-                                Customer oriented
-                            </a>
-                            <a href="#" class="benefits__link">
-                                Innovative
-                            </a>
-                            <a href="#" class="benefits__link">
-                                Business oriented
-                            </a>
+                        <div class="wrapper-benefits-link">
+                            <div class="benefits__link-container">
+                                <a href="#" class="benefits__link">
+                                    Consistent
+                                </a>
+                                <a href="#" class="benefits__link">
+                                    Customer oriented
+                                </a>
+                                <a href="#" class="benefits__link">
+                                    Innovative
+                                </a>
+                                <a href="#" class="benefits__link">
+                                    Business oriented
+                                </a>
+                            </div>
                         </div>
-                        <div class="benefits__line"></div>
-                        <div class="benefits__desc-container">
-                            <h2 class="benefits__title">
-                                We turn the idea of legal services
-                            </h2>
-                            <p class="benefits__desc">
-                                Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
-                            </p>
+                        <div class="benefits__line-wrapper">
+                            <div class="benefits__line"></div>
+                        </div>
+                        <div class="wrapper-benefits-desc">
+                            <div class="benefits__desc-container">
+                                <h2 class="benefits__title">
+                                    We turn the idea of legal services
+                                </h2>
+                                <p class="benefits__desc">
+                                    Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,4 +269,17 @@
         </div>
     </footer>
 </body>
+<script>
+    const form = document.querySelector('#layer');
+    const close = document.querySelector('#close');
+    const openButton = document.querySelector('#open_button');
+
+    openButton.addEventListener('click', () => {
+        form.classList.add('form_showed');
+    })
+
+    close.addEventListener('click', () => {
+        form.classList.remove('form_showed');
+    })
+</script>
 </html>
