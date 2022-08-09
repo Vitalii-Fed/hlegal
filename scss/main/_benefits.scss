@@ -37,6 +37,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            margin: 0 0 0 30px;
         }
     }
 
@@ -77,6 +78,10 @@
 
         &__link {
             @include font(38px, 46px);
+
+            &:first-child {
+                margin: 0 0 0 60px;
+            }
         }
 
         &__title {
