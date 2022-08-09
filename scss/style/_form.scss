@@ -1,3 +1,7 @@
+.form_showed {
+    display: block;
+}
+
 .layer {
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
@@ -7,10 +11,6 @@
     height: 100%;
     z-index: 1;
     display: none;
-}
-
-.form_showed {
-    display: block;
 }
 
 .form-container {
