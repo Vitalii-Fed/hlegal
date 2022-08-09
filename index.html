@@ -245,7 +245,7 @@
             </div>
         </div>
     </footer>
-    <div id="layer" class="layer form_showed">
+    <div id="layer" class="layer">
         <div class="form-container">
             <form action="https://fom.in.ua/echo" method="get" class="form">
                 <div class="form__title-container">
@@ -268,18 +268,6 @@
             </form>
         </div>
     </div>
-    <script>
-        const form = document.querySelector('#layer');
-        const close = document.querySelector('#close');
-        const openButton = document.querySelector('#open_button');
-
-        openButton.addEventListener('click', () => {
-            form.classList.add('form_showed');
-        })
-
-        close.addEventListener('click', () => {
-            form.classList.remove('form_showed');
-        })
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
