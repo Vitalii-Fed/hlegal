@@ -1,11 +1,23 @@
-const form = document.querySelector('#layer');
-const close = document.querySelector('#close');
-const openButton = document.querySelector('#open_button');
+const formLayer = document.querySelector('#form_layer');
+const formClose = document.querySelector('#form_close');
+const formOpenButton = document.querySelector('#form_open_button');
 
-openButton.addEventListener('click', () => {
-    form.classList.add('form_showed');
+formOpenButton.addEventListener('click', () => {
+    formLayer.classList.add('form_showed');
 })
 
-close.addEventListener('click', () => {
-    form.classList.remove('form_showed');
+formClose.addEventListener('click', () => {
+    formLayer.classList.remove('form_showed');
+})
+
+const menuLayer = document.querySelector('#menu_layer');
+const menuClose = document.querySelector('#menu_close');
+const menuOpenButton = document.querySelector('#menu_open_button');
+
+menuOpenButton.addEventListener('click', () => {
+    menuLayer.classList.add('menu_showed');
+})
+
+menuClose.addEventListener('click', () => {
+    menuLayer.classList.remove('menu_showed');
 })
