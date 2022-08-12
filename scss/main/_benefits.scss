@@ -23,13 +23,10 @@
         text-align: right;
         color: #B3B3BA;
         text-decoration: none;
+        margin-right: 30px;
 
         &:nth-child(n+2):hover {
             color: #F0145A;
-        }
-
-        &:nth-child(-n+3) {
-            margin-right: 30px;
         }
 
         &:first-child {
@@ -37,7 +34,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin: 0 0 0 30px;
+            margin: 0 30px 0 30px;
         }
     }
 
@@ -80,7 +77,11 @@
             @include font(38px, 46px);
 
             &:first-child {
-                margin: 0 0 0 60px;
+                margin-left: 60px;
+            }
+
+            &:last-child {
+                margin-right: 60px;
             }
         }
 
