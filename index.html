@@ -12,20 +12,44 @@
 <body>
     <main>
         <div class="container-primary">
-            <section class="container-header">
-                <div class="wrapper-header">
-                    <header class="header">
-                        <nav class="menu">.</nav>
-                        <h1 class="header__title">
-                            you legal solutions provider
-                        </h1>
-                        <button type="button" id="open_button" class="header__btn">
-                            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="header__btn-arrow" d="M1 1L10 10L19 1" stroke="white" stroke-width="2"/>
-                            </svg>
-                        </button>
-                    </header>
-                </div>
+            <section class="wrapper-header">
+                <header class="header">
+                    <div class="header__nav">
+                        <div class="contacts-container">
+                            <div class="contacts-sub-container">
+                                <ul class="header__list">
+                                    <li class="header__list-item"><a href="#" class="header__language">УК</a></li>
+                                    <li class="header__list-item"><a href="#" class="header__language">РУ</a></li>
+                                    <li class="header__list-item"><a href="#" class="header__language">EN</a></li>
+                                </ul>
+                                <div class="header__address">
+                                    Kyiv, Mechnikova str, 14/1
+                                </div>
+                                <address class="header__phone-container">
+                                    <a href="tel:0800211927" class="header__phone">0800 211 927</a>
+                                </address>
+                                <a href="#" class="header__icon-fb"></a>
+                            </div>
+                            <nav class="menu menu-desctop">
+                                <a href="#" class="menu__link">about us</a>
+                                <a href="#" class="menu__link">services</a>
+                                <a href="#" class="menu__link">team</a>
+                                <a href="#" class="menu__link">publications</a>
+                                <a href="#" class="menu__link">contact</a>
+                            </nav>
+                        </div>
+                        <a href="#" class="header__link"><img src="./images/header/logo_hlegal.svg" alt="hlegalLogo" class="header__logo"></a>
+                        <button type="button" class="header__menu-btn" id="menu_open_button"></button>
+                    </div>
+                    <h1 class="header__title">
+                        you legal solutions provider
+                    </h1>
+                    <button type="button" id="form_open_button" class="header__btn">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="header__btn-arrow" d="M1 1L10 10L19 1" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </header>
             </section>
             <section class="container-benefits">
                 <div class="wrapper-benefits">
@@ -245,14 +269,25 @@
             </div>
         </div>
     </footer>
-    <div id="layer" class="layer">
+    <div class="layer-mob" id="menu_layer">
+        <div class="menu-mobile">
+            <button id="menu_close" type="button" class="menu__btn-cross">
+            </button>
+            <a href="#" class="menu__link-mobile">about us</a>
+            <a href="#" class="menu__link-mobile">services</a>
+            <a href="#" class="menu__link-mobile">team</a>
+            <a href="#" class="menu__link-mobile">publications</a>
+            <a href="#" class="menu__link-mobile">contact</a>
+        </div>
+    </div>
+    <div id="form_layer" class="layer">
         <div class="form-container">
             <form action="https://fom.in.ua/echo" method="get" class="form">
                 <div class="form__title-container">
                     <h2 class="form__title">
                         We would like to help you
                     </h2>
-                    <button id="close" type="button" class="form__btn-cross">
+                    <button id="form_close" type="button" class="form__btn-cross">
                     </button>
                 </div>
                 <input type="text" name="name" placeholder="Name" class="form__name">

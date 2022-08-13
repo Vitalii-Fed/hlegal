@@ -1,0 +1,327 @@
+.wrapper-header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+}
+
+.header {
+
+    &__link {
+        padding-left: 15px;
+    }
+
+    &__list-item {
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    &__language {
+        font-weight: 700;
+        @include font(12px, 15px);
+        letter-spacing: 1px;
+        color: #FFFFFF;
+        margin-right: 7px;
+        padding: 5px 7px;
+        border-radius: 8px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__language:hover {
+        background: #F0145A;
+    }
+
+    &__address {
+        position: relative;
+        @include font(16px, 20px);
+        color: #B3B3BA;
+        display: none;
+
+        &:before {
+            content: '';
+            background: #E6E6F0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            top: 7px;
+            left: -12px;
+        }
+    }
+
+    &__phone {
+        position: relative;
+        font-weight: 700;
+        @include font(16px, 20px);
+        color: #FFFFFF;
+        text-decoration: none;
+        font-style: normal;
+
+        &:before {
+            content: '';
+            background: #E6E6F0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            top: 7px;
+            left: -12px;
+            display: none;
+        }
+    }
+
+    &__icon-fb {
+        background-image: url(../images/header/fb_icon.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        display: none;
+
+        &:before {
+            content: '';
+            background: #E6E6F0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            top: 9px;
+            left: -12px;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+
+        .contacts-container {
+            width: 100%;
+        }
+
+        .contacts-sub-container {
+            width: 100%;
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 15px 15px 22px;
+            background: rgba(245, 245, 250, 0.2);
+            margin-bottom: 15px;
+        }
+
+        .menu {
+            font-size: 0;
+            display: none;
+
+            &__link {
+                font-weight: 700;
+                @include font(16px, 20px);
+                color: #FFFFFF;
+                text-decoration: none;
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+
+    &__menu-btn {
+        background: none;
+        background-image: url(../images/header/menu_btn.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+        width: 32px;
+        height: 32px;
+        margin-right: 22px;
+        &:active {
+            background-color: #F0145A;
+            ;
+            border-radius: 12px;
+        }
+    }
+}
+
+.layer-mob {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.menu_showed {
+    display: block;
+}
+
+.menu-mobile {
+    font-size: 0;
+    display: block;
+    padding: 64px 12px 12px 12px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+}
+
+.menu__link-mobile {
+    width: 100%;
+    display: block;
+    @include font(24px, 29px);
+    text-align: center;
+    color: #24A3FF;
+    text-decoration: none;
+    background-color: #F5F5FA;
+    border-radius: 12px;
+    padding: 7px 0 7px 0;
+
+    &:hover {
+        color: #F0145A;
+    }
+    
+    &:active {
+        background: #E6E6F0;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.menu__btn-cross {
+    border: none;
+    background: none;
+    background-image: url(../images/header/form_cross.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    &:hover {
+        background-color: #E6E6F0;
+        border-radius: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        &__link {
+            padding-left: 0;
+            position: absolute;
+            top: 105px;
+        }
+
+        &__address {
+            display: inline-block;
+        }
+
+        &__phone {
+            &::before {
+                display: inline-block;
+            }
+        }
+
+        &__icon-fb {
+            display: inline-block;
+        }
+
+        &__menu-btn {
+            display: none;
+        }
+
+        &__nav {
+            flex-direction: column;
+            padding: 50px 0 0 60px;
+            gap: 30px;
+
+            .menu {
+                display: flex;
+            }
+
+            .contacts-sub-container {
+                justify-content: flex-start;
+                margin-bottom: 0;
+                background: none;
+                padding: 0;
+                margin-bottom: 125px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        &__nav {
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 0;
+            padding: 50px 60px 0 60px;
+
+            .menu {
+                text-align: right;
+                width: 70%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+            }
+        }
+
+        &__list {
+            position: relative;
+            top: -2px;
+        }
+
+        &__link {
+            width: 20%;
+            order: -1;
+            position: static;
+        }
+
+        &__address {
+            color: #FFFFFF;
+        }
+
+        &__icon-fb {
+            top: -3px;
+        }
+
+        .contacts-container {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .contacts-sub-container {
+            width: 70%;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 30px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .header__nav {
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+}
