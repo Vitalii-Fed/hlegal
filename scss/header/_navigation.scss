@@ -1,7 +1,18 @@
+.wrapper-header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+}
+
 .header {
 
     &__link {
         padding-left: 15px;
+    }
+
+    &__list-item {
+        display: inline-block;
+        list-style-type: none;
     }
 
     &__language {
@@ -10,10 +21,10 @@
         letter-spacing: 1px;
         color: #FFFFFF;
         margin-right: 7px;
-        list-style-type: none;
         padding: 5px 7px;
         border-radius: 8px;
         display: inline-block;
+        text-decoration: none;
 
         &:last-child {
             margin-right: 0;
@@ -89,6 +100,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        position: relative;
 
         .contacts-container {
             width: 100%;
@@ -105,16 +117,9 @@
             margin-bottom: 15px;
         }
 
-        .menu-tablet {
-            display: none;
-        }
-
-        .menu-desctop {
-            display: none;
-        }
-
         .menu {
             font-size: 0;
+            display: none;
 
             &__link {
                 font-weight: 700;
@@ -219,6 +224,8 @@
     .header {
         &__link {
             padding-left: 0;
+            position: absolute;
+            top: 105px;
         }
 
         &__address {
@@ -244,12 +251,8 @@
             padding: 50px 0 0 60px;
             gap: 30px;
 
-            .menu-desctop {
-                display: none;
-            }
-
-            .menu-tablet {
-                display: inline-block;
+            .menu {
+                display: flex;
             }
 
             .contacts-sub-container {
@@ -257,6 +260,7 @@
                 margin-bottom: 0;
                 background: none;
                 padding: 0;
+                margin-bottom: 125px;
             }
         }
     }
@@ -273,13 +277,9 @@
             .menu {
                 text-align: right;
                 width: 70%;
-            }
-
-            .menu-desctop {
-                width: 70%;
                 display: flex;
-                justify-content: flex-end;
                 align-items: flex-end;
+                justify-content: flex-end;
             }
         }
 
@@ -291,6 +291,7 @@
         &__link {
             width: 20%;
             order: -1;
+            position: static;
         }
 
         &__address {
@@ -299,10 +300,6 @@
 
         &__icon-fb {
             top: -3px;
-        }
-
-        .menu-tablet {
-            display: none;
         }
 
         .contacts-container {
@@ -317,6 +314,7 @@
             justify-content: flex-end;
             align-items: flex-start;
             height: 30px;
+            margin-bottom: 0;
         }
     }
 }
