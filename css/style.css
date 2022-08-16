@@ -1286,11 +1286,6 @@ body {
   justify-content: space-between;
 }
 
-@media (min-width: 768px) {
-  .form-container {
-    min-height: 612px;
-  }
-}
 .wrapper-header {
   margin-left: auto;
   margin-right: auto;
