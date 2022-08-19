@@ -3,7 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const csso = require('gulp-csso');
 const rename = require('gulp-rename');
 const del = require('del');
-const autoprefixer = require('autoprefixewr');
+const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 
 gulp.task('scss', () => {
