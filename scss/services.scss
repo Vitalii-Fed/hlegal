@@ -7,6 +7,10 @@
 @import './style/main';
 @import './style/fonts';
 
+.services__title {
+    margin-top: 40px;
+}
+
 .title-partner {
     margin-top: 50px;
 }
@@ -68,6 +72,10 @@
                 }
             }
         }
+    }
+
+    .services__title {
+        margin-top: 60px;
     }
 }
 
