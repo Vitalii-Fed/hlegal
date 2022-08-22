@@ -44,6 +44,11 @@
         color: #24A3FF;
         text-decoration: none;
         margin: 10px 0 0 0;
+
+        &:hover {
+            color: #F0145A;
+
+        }
     }
 
     &__icon-container {

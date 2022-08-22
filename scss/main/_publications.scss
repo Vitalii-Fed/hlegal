@@ -25,7 +25,17 @@
             transform: rotate(45deg);
             bottom: 35%;
         }
-}
+
+        &:hover {
+            color: #F0145A;
+
+        }
+        
+        &:hover::after {
+            border-color: #F0145A;
+        }
+    }
+    
     &__title {
         @include font(30px, 37px);
         font-weight: 700;

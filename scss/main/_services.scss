@@ -58,6 +58,15 @@
             transform: rotate(45deg);
             bottom: 30%;
         }
+
+        &:hover {
+            color: #F0145A;
+
+        }
+        
+        &:hover::after {
+            border-color: #F0145A;
+        }
     }
 
     &__title {
@@ -156,16 +165,5 @@
     }
     .container-services {
         padding: 0 0 60px 0;
-    }
-
-    .services__link {
-        &:hover {
-            color: #F0145A;
-
-        }
-        
-        &:hover::after {
-            border-color: #F0145A;
-        }
     }
 }

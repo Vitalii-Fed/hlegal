@@ -40,6 +40,15 @@
             transform: rotate(45deg);
             bottom: 35%;
         }
+
+        &:hover {
+            color: #F0145A;
+
+        }
+        
+        &:hover::after {
+            border-color: #F0145A;
+        }
     }
 
     &__title {
@@ -79,8 +88,7 @@
         opacity: 0.2;
         border-radius: 50%;
         border: none;
-
-        &:active {
+        &:first-child {
             background: #24A3FF;
             opacity: 1;
         }
