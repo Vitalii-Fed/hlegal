@@ -92,3 +92,14 @@
         }
     }
 }
+
+@media (min-width: 1920px) {
+    .header {
+        &__link {
+            &::before {
+                content: '';
+                left: 300px;
+            }
+        }
+    }
+}

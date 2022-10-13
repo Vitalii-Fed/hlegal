@@ -68,6 +68,9 @@
         @include font(16px, 20px);
         font-weight: 700;
         color: $colorTextSecondary;
+        &:hover {
+            color: #F0145A;
+        }
     }
 
     &__date {
@@ -81,7 +84,11 @@
     }
 
     &__desc {
+        color: $colorTextSecondary;
         @include font(14px, 22px);
+        &:visited {
+            color: $colorTextPrimary;
+            }
 
         &::before {
             content: '';

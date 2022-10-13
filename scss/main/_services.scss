@@ -85,6 +85,10 @@
         color: $colorTextSecondary;
         margin-top: 30px;
         margin-bottom: 15px;
+        &:hover {
+            color: #F0145A;
+        }
+        cursor: pointer;
     }
 
     &__img {

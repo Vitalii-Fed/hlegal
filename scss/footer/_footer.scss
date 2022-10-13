@@ -91,6 +91,9 @@
         text-decoration: none;
         font-style: normal;
         margin-top: 10px;
+        &:hover {
+            color: #F0145A;
+        }
     }
 
     &__license {

@@ -126,11 +126,13 @@
                 @include font(16px, 20px);
                 color: #FFFFFF;
                 text-decoration: none;
+                padding: 3px 7px;
+                border-radius: 10px;
                 &:not(:last-child) {
                     margin-right: 15px;
                 }
                 &:hover {
-                    color: #F0145A;
+                    background-color: #F0145A;
                 }
             }
         }
